@@ -10,3 +10,4 @@ SQLAlchemy==1.4.44
 openpyxl==3.1.2
 plotly==5.23.0
 Flask==2.2.5
+redis==4.5.4
