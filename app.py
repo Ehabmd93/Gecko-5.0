@@ -18,8 +18,9 @@ import time
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, Float, TIMESTAMP, select, func, text
 from sqlalchemy.orm import sessionmaker
 
-# Database connection details
-DATABASE_URL = os.environ.get('DATABASE_URL', "postgresql://qhbw_sql_user:EJyTGHeLljJ1TCXlLtWPYPtrGDDzOLpg@dpg-cqkb5dbqf0us73c6a0lg-a.oregon-postgres.render.com/qhbw_sql")
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if not DATABASE_URL:
+    raise ValueError("No DATABASE_URL environment variable set")
 
 # Initialize SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
