@@ -2,11 +2,10 @@ services:
   - type: web
     name: gecko-app
     env: python
-    plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:server"
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:server
     envVars:
       - key: DATABASE_URL
-        value: "your_database_url_here"
+        value: postgresql://qhbw_sql_user:EJyTGHeLljJ1TCXlLtWPYPtrGDDzOLpg@dpg-cqkb5dbqf0us73c6a0lg-a.oregon-postgres.render.com/qhbw_sql
       - key: PYTHON_VERSION
-        value: "3.11.9"
+        value: 3.11.9
