@@ -8,3 +8,5 @@ gunicorn==20.1.0
 numpy==1.23.5
 SQLAlchemy==1.4.44
 openpyxl==3.1.2
+plotly==5.23.0
+Flask==2.2.5
