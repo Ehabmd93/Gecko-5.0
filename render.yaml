@@ -9,3 +9,6 @@ services:
         value: postgresql://qhbw_sql_user:EJyTGHeLljJ1TCXlLtWPYPtrGDDzOLpg@dpg-cqkb5dbqf0us73c6a0lg-a.oregon-postgres.render.com/qhbw_sql
       - key: PYTHON_VERSION
         value: 3.11.9
+envVars:
+  - key: REDIS_URL
+    value: redis://red-cql0cgt6l47c73f0lch0:6379
